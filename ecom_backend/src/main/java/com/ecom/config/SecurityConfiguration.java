@@ -94,7 +94,8 @@ public class SecurityConfiguration {
 
                 // Remaining APIs require authentication
                 .anyRequest()
-                .authenticated());
+                .permitAll());
+                //.authenticated());
 
         return http.build();
     }
