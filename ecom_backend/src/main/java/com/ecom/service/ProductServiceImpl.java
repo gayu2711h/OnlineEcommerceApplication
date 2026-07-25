@@ -4,12 +4,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ecom.dto.ProductRequestDto;
-import com.ecom.dto.ProductResponseDto;
+import com.ecom.custom_exception.ApiException;
+import com.ecom.custom_exception.ResourceNotFoundException;
+import com.ecom.dtos.ProductRequestDto;
+import com.ecom.dtos.ProductResponseDto;
 import com.ecom.entities.Category;
 import com.ecom.entities.Product;
-import com.ecom.exception_handler.APIException;
-import com.ecom.exception_handler.ResourceNotFoundException;
 import com.ecom.repository.CategoryRepository;
 import com.ecom.repository.ProductRepository;
 
@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService
 		// Check Duplicate Product
 	     if (productRepository.existsByProductNameIgnoreCase(productDto.getProductName())) 
 	     {
-	    	 throw new APIException(
+	    	 throw new ApiException(
               "Product already exists with name : " + productDto.getProductName());
 	     }
 	        

@@ -1,4 +1,4 @@
-package com.ecom.exception_handler;
+package com.ecom.custom_exception;
 
 public class ResourceNotFoundException extends RuntimeException {
 

@@ -1,7 +1,7 @@
 package com.ecom.service;
 
-import com.ecom.dto.ProductRequestDto;
-import com.ecom.dto.ProductResponseDto;
+import com.ecom.dtos.ProductRequestDto;
+import com.ecom.dtos.ProductResponseDto;
 
 import jakarta.validation.Valid;
 

@@ -1,8 +1,10 @@
 package com.ecom.custom_exception;
 
-public class ApiException extends RuntimeException {
+public class ApiException extends RuntimeException 
+{
 
-	public ApiException(String mesg) {
+	public ApiException(String mesg) 
+	{
 		super(mesg);
 	}
 }
